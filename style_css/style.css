@@ -1,72 +1,89 @@
-*{
-  margin: 0;
-  padding: 0;
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
 }
 
-.header{
-  background-color: gray;
-  width: 100%;
-  height: 10dvh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.container {
+    background-image: url('/images/banner.jpeg');
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 100vh;  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;  
+    text-align: center;  
+    color: white;  
+    padding: 0 20px;  
 }
 
-.logo{
-  width: 20%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+.container::before {
+    content: "";  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;  
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);  
+    z-index: -1;  
+}  
+
+/* Estilo para el texto */
+.text h1 {
+    font-size: 3em;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    margin: 20px 0;
 }
 
-.logo img{
-  height: 95%;
-  object-fit: cover;
-  padding: 10%;
+/* Estilo para los logos */
+.logos {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    width: 100%;  
+    max-width: 600px;  
 }
 
-.titulo {
-  flex: 1;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.logos img {
+    height: 80px;  
+    margin: 0 10px;  
 }
 
-.titulo h1 {
-  font-size: 24px; /* Ajusta el tamaño según lo necesites */
-  color: black;
+/* Estilo para el botón */
+.btn {
+    margin-top: 30px;
 }
 
-
-.nav{
-  width: 30%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 1%;
+.btn button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
-
-.nav a{
-  text-decoration: none;
-  color: black;
-  font-size: 16px;
-  padding: 0 25px;
+.btn button:hover {
+    background-color: white;
+    color: black;
 }
 
-.tkd{
-  width: 100%;
-  height: 150dvh;
+/* Cambios para la transición */
+.text h1, .logos, .btn {
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.tkd img{
-  width: 100%;
-  height: 50%;
+/* Animación cuando los elementos se vuelven visibles */
+.text h1.active, .logos.active, .btn.active {
+    opacity: 1;
+    transform: translateY(0);
 }
-
