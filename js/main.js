@@ -12,3 +12,13 @@ window.addEventListener('load', () => {
         document.querySelector('.btn').classList.add('active');
     }, 1500); // El botón aparece después de 1.5s
 });
+
+
+let ingreso = document.querySelector(".btn")
+ingreso.addEventListener("click", function (){
+    window.location.href = "pages/inicio.html"
+})
+
+
+
+

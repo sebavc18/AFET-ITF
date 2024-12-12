@@ -1,8 +1,13 @@
 /* Diseño móvil primero */
-body {
-    font-size: 14px;
-    padding: 10px;
-    background-color: white;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -44,6 +49,78 @@ body {
     .item {
         width: 30%; /* Tres elementos por fila */
     }
+}
+
+
+
+
+header{
+  background-image: url(../images/banner.jpg);
+  background-size: cover;
+  
+}
+
+
+.banner{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5em;
+
+
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 100%;
+}
+
+.logo img{
+    height: 100%;
+    padding: 0.25em;
+}
+
+.logo h1{
+  color: white;
+}
+
+
+.barnav{
+    display: flex;
+    gap: 1em;
+    padding: 1em;
+
+}
+
+.menu{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    
+}
+.menu a{
+ background-color: transparent;
+ text-decoration: none;
+ color: white;
+ 
+}
+
+.menu a:visited{
+    color:white
+}
+
+
+
+.menu a:hover{
+    transition: 0.5s;
+}
+
+.menu:hover {
+  transform: translateY(-5px); /* Levantar el elemento ligeramente */
 }
 
 
