@@ -6,33 +6,33 @@ html, body {
 
 .container {
     background-image: url('/images/banner.jpeg');
-    background-size: cover;  
-    background-position: center;  
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;  
-    display: flex;  
-    flex-direction: column;  
-    justify-content: center;  
-    align-items: center;  
-    text-align: center;  
-    color: white;  
-    padding: 0 20px;  
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
 }
 
 .container::before {
-    content: "";  
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: inherit;  
+    background-image: inherit;
     background-size: cover;
     background-position: center;
-    filter: brightness(50%);  
-    z-index: -1;  
-}  
+    filter: brightness(50%);
+    z-index: -1;
+}
 
 /* Estilo para el texto */
 .text h1 {
@@ -45,15 +45,15 @@ html, body {
 /* Estilo para los logos */
 .logos {
     display: flex;
-    justify-content: space-between;  
+    justify-content: space-between;
     align-items: center;
-    width: 100%;  
-    max-width: 600px;  
+    width: 100%;
+    max-width: 600px;
 }
 
 .logos img {
-    height: 80px;  
-    margin: 0 10px;  
+    height: 80px;
+    margin: 0 10px;
 }
 
 /* Estilo para el botón */
@@ -78,7 +78,7 @@ html, body {
 /* Cambios para la transición */
 .text h1, .logos, .btn {
     opacity: 0;
-    transform: translateY(50px); 
+    transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
@@ -86,4 +86,66 @@ html, body {
 .text h1.active, .logos.active, .btn.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Responsive */
+
+/* Pantallas pequeñas (menos de 600px) */
+@media (max-width: 600px) {
+    .text h1 {
+        font-size: 2em;  /* Ajustar tamaño de fuente */
+    }
+
+    .logos {
+        flex-direction: column;  /* Apilar los logos verticalmente */
+        align-items: center;
+    }
+
+    .logos img {
+        height: 60px;  /* Ajustar tamaño de los logos */
+        margin: 10px 0;
+    }
+
+    .btn button {
+        font-size: 1em;  /* Reducir tamaño de fuente */
+        padding: 8px 16px;  /* Reducir padding */
+    }
+}
+
+/* Pantallas medianas (entre 600px y 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .text h1 {
+        font-size: 2.5em;  /* Ajustar tamaño de fuente */
+    }
+
+    .logos {
+        justify-content: space-around;  /* Distribuir los logos uniformemente */
+    }
+
+    .logos img {
+        height: 70px;  /* Ajustar tamaño de los logos */
+    }
+
+    .btn button {
+        font-size: 1.1em;  /* Ajustar tamaño de fuente */
+    }
+}
+
+/* Pantallas grandes (más de 900px) */
+@media (min-width: 901px) {
+    .text h1 {
+        font-size: 3em;  /* Tamaño de fuente original */
+    }
+
+    .logos {
+        justify-content: space-between;  /* Espaciado entre los logos */
+    }
+
+    .logos img {
+        height: 80px;  /* Tamaño de los logos original */
+    }
+
+    .btn button {
+        font-size: 1.2em;  /* Tamaño de fuente original */
+    }
 }
