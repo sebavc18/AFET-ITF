@@ -7,6 +7,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #222222;
 }
 
 header {
@@ -98,7 +99,7 @@ header {
 
 /* Sección Nosotros */
 .Nosotros {
-  background-color: #81CCEC;
+  background-color: #222222;
   display: flex;
   gap: 1em;
 }
@@ -151,6 +152,7 @@ header {
   padding: 2em;
   font-size: 1.75rem;
   text-align: justify;
+  color: whitesmoke;
 }
 
 .redes {
@@ -195,7 +197,7 @@ a:hover {
 /* Teoría */
 .Teoria {
   height: 50vh;
-  background-color: darkblue;
+  background-color: #222222;
 }
 
 /* Estilos responsive */
