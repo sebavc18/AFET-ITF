@@ -18,6 +18,7 @@ html, body {
     text-align: center;
     color: white;
     padding: 0 20px;
+    position: relative; /* Asegura que el ::before esté correctamente posicionado */
 }
 
 .container::before {
@@ -40,6 +41,7 @@ html, body {
     font-family: "Anton SC", sans-serif;
     font-weight: 400;
     margin: 20px 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 /* Estilo para los logos */
@@ -49,16 +51,19 @@ html, body {
     align-items: center;
     width: 100%;
     max-width: 600px;
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .logos img {
     height: 80px;
     margin: 0 10px;
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 /* Estilo para el botón */
 .btn {
     margin-top: 30px;
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .btn button {
@@ -79,10 +84,8 @@ html, body {
 .text h1, .logos, .btn {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* Animación cuando los elementos se vuelven visibles */
 .text h1.active, .logos.active, .btn.active {
     opacity: 1;
     transform: translateY(0);
