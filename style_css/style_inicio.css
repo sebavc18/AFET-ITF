@@ -70,7 +70,7 @@ transform: translateY(-5px); /* Levantar el elemento ligeramente */
 /*banner de abajo */
 
 .banner-2{
-height: 50vh;
+height: 100vh;
 display: grid;
 grid-template-columns: 1fr 1fr;
 align-items: center;
@@ -110,11 +110,43 @@ height: 80%;
 padding: 2em;
 }
 
+#myImage.hidden {
+  opacity: 0;
+  transform: translateX(-100%); /* Mueve la imagen fuera de la pantalla desde la izquierda */
+  transition: transform 1s ease-out, opacity 0.5s ease-in-out; /* Transiciones para movimiento y opacidad */
+}
+
+#myImage.visible {
+  opacity: 1;
+  transform: translateX(0); /* Mueve la imagen al centro de su posición */
+  transition: transform 1s ease-out, opacity 0.5s ease-in-out; /* Transiciones para movimiento y opacidad */
+}
+
+#texto.hidden {
+  opacity: 0; /* Empieza oculto */
+  transform: translateY(100%); /* Fuera del viewport hacia abajo */
+  transition: transform 1s ease-out, opacity 0.5s ease-in-out; /* Transición suave */
+}
+
+#texto.visible {
+  opacity: 1; /* Aparece */
+  transform: translateX(0);
+  transition: transform 1s ease-out, opacity 0.5s ease-in-out;
+}
+
+
+
+
+
+
+
 .foto img{
 width: 100%; 
 height: auto; 
 padding-left: 6em;
 }
+
+
 
 .texto{
 display: flex;
@@ -156,6 +188,17 @@ box-shadow: 5px 5px  ;
 width: 3em;
 height: 3em;
 }
+
+/*¨Teoria*/
+
+.Teoria{
+  
+  height: 50vh;
+  background-color: darkblue;
+}
+
+
+
 
 /* Responsive Styles */
 
