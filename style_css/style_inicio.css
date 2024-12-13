@@ -1,163 +1,252 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 header{
-  background-image: url(../images/banner.jpg);
-  background-size: cover;
-  
+background-image: url(../images/banner.jpg);
+background-size: cover;
 }
 
-
 .banner{
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 5em;
-
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5em;
 }
 
 .logo{
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  height: 100%;
+display: flex;
+align-items: center;
+gap: 0.5em;
+height: 100%;
 }
 
 .logo img{
-    height: 100%;
-    padding: 0.25em;
+  height: 100%;
+  padding: 0.25em;
 }
 
 .logo h1{
-  color: white;
+color: white;
 }
 
-
 .barnav{
-    display: flex;
-    gap: 1em;
-    padding: 1em;
-
+  display: flex;
+  gap: 1em;
+  padding: 1em;
 }
 
 .menu{
-    list-style: none;
-    width: 100%;
-    height: 100%;
-    font-size: 1.5rem;
-    
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
 }
 .menu a{
- background-color: transparent;
- text-decoration: none;
- color: white;
- 
+background-color: transparent;
+text-decoration: none;
+color: white;
 }
 
 .menu a:visited{
-    color:white
+  color:white
 }
 
-
-
 .menu a:hover{
-    transition: 0.5s;
+  transition: 0.5s;
 }
 
 .menu:hover {
-  transform: translateY(-5px); /* Levantar el elemento ligeramente */
+transform: translateY(-5px); /* Levantar el elemento ligeramente */
 }
-
-
-
-
-
 
 /*banner de abajo */
 
 .banner-2{
-  height: 50vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  
+height: 50vh;
+display: grid;
+grid-template-columns: 1fr 1fr;
+align-items: center;
 }
 
-
 .izquierda{
-  width: 500px;
-  padding-right: 1em;
-  justify-self: center;
+width: 500px;
+padding-right: 1em;
+justify-self: center;
 }
 
 .image{
-  justify-self: center;
+justify-self: center;
 }
 
 .image img{
-  width: 300px;
-  height: 300px;
+width: 300px;
+height: 300px;
 }
-
-
 
 .izquierda h1{
-  color: white;
-  font-size: 3.5rem;
+color: white;
+font-size: 3.5rem;
 }
-
 
 /* Seccion Nosotros */
 
 .Nosotros{
-  background-color: wheat;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  
+background-color: #81CCEC;
+display: flex;
+gap: 1em;
 }
-
-
-.texto{
-  background-color: aqua;
-  width: 50%;
-}
-
-.texto h1{
-  align-self: center;
-  justify-self: center;
-}
-
 
 .foto{
-  width: 60%;
-  height: 80%;
-  padding: 2em;
+flex-basis: 40%;
+height: 80%;
+padding: 2em;
 }
 
 .foto img{
-  width: 100%;
-  height: 100%;
+width: 100%; 
+height: auto; 
+padding-left: 6em;
 }
 
+.texto{
+display: flex;
+flex-direction: column;
+align-items: center;
+max-width: 50%;
+}
 
+.texto p{
+max-width: 80%;
+padding: 2em;
+text-wrap: pretty;
+font-size: 1.75rem;
+text-align: justify;
+}
 
+.redes{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+gap: 2em;
+}
 
+.redes button{
+grid-column-start: 1;
+grid-column-end: 3;
+background-color: burlywood;
+border: none;
+border-radius: 2em;
+}
 
+.ver-mas:hover{
+transition: 0.5s;
+transform: translatey(-1em);
+box-shadow: 5px 5px  ;
+}
 
+.redes img{
+width: 3em;
+height: 3em;
+}
 
+/* Responsive Styles */
 
+@media (max-width: 768px) {
+.banner {
+  flex-direction: column;
+  height: auto;
+}
 
+.logo {
+  justify-content: center;
+  gap: 1em;
+}
 
+.barnav {
+  flex-direction: column;
+  align-items: center;
+  display: none; /* Oculta el menú por defecto */
+}
 
+.barnav.active {
+  display: flex; /* Muestra el menú cuando esté activo */
+}
 
+.menu {
+  font-size: 1.2rem;
+}
+
+.hamburger {
+  display: block;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 1em;
+}
+
+.banner-2 {
+  grid-template-columns: 1fr;
+  height: auto;
+}
+
+.izquierda {
+  width: 100%;
+  padding-right: 0;
+}
+
+.image img {
+  width: 200px;
+  height: 200px;
+}
+
+.izquierda h1 {
+  font-size: 2.5rem;
+}
+
+.Nosotros {
+  flex-direction: column;
+  align-items: center;
+}
+
+.foto img {
+  padding-left: 0;
+}
+
+.texto {
+  max-width: 90%;
+}
+
+.texto p {
+  font-size: 1.25rem;
+}
+
+.redes {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.image {
+  display: none;
+}
+}
+
+@media (min-width: 769px) {
+.hamburger {
+  display: none; /* Ocultar el botón en resoluciones grandes */
+}
+
+.barnav {
+  display: flex; /* Mostrar el menú como estaba antes */
+  flex-direction: row;
+}
+}
